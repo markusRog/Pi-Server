@@ -6,7 +6,7 @@
 >ssh username@piName/IP (on error check ~/.ssh/known_hosts)  
 >sudo apt update  
 >sudo apt upgrade
-#### 2.2 Install Docker
+#### 2.2 Install Docker https://docs.docker.com/engine/install/ubuntu/
 ##### Add Docker's official GPG key:
 >sudo apt-get update  
 >sudo apt-get install ca-certificates curl
@@ -27,4 +27,6 @@
 ##### Reboot to be sure
 >sudo reboot
 ### 3. Git clone
-
+>git clone https://github.com/markusRog/Pi-Server.git
+### 4. Start Container
+>sudo docker build -f Dockerfile -t apache
