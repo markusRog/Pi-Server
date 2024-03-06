@@ -3,9 +3,12 @@
 ### 1. RaspberryPi-Imager Install UBUNTU SERVER 22.04.4 LTS (64bit)
 ### 2. Terminal execution 
 #### 2.1 Initial
->ssh username@piName/IP (on error check ~/.ssh/known_hosts)  
+>ssh username@raspberrypiName/IP  
 >sudo apt update  
 >sudo apt upgrade
+##### 2.1.1 SSH Troubleshooting
+* delete this file on your machine ~/.ssh/known_hosts
+* on the SD-Card in the boot directory use "touch ssh" if there is no ssh-file
 #### 2.2 Install Docker https://docs.docker.com/engine/install/ubuntu/
 ##### Add Docker's official GPG key:
 >sudo apt-get update  
@@ -28,5 +31,7 @@
 >sudo reboot
 ### 3. Git clone
 >git clone https://github.com/markusRog/Pi-Server.git
-### 4. Start Container
->sudo docker build -f Dockerfile -t apache
+### 4. Build and Start Container
+>sudo docker build -t apache . && sudo docker run -d --name apache -p 8080:80 apache
+
+
