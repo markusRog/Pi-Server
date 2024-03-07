@@ -32,6 +32,6 @@
 ### 3. Git clone
 >git clone https://github.com/markusRog/Pi-Server.git
 ### 4. Build and Start Container
->sudo docker build -t apache . && sudo docker run -d --name apache -p 8080:80 apache
-
+>sudo docker build -t apache . && sudo docker run -d --name apache -p 8080:80 apache  
+>sudo docker logs --follow <container ID>
 
